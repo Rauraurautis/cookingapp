@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/addcss.css}" rel="stylesheet">
+    </head>
+    <body>
+    <div class="main-container">
+        <div class="sub-container">
+            <h1>Add a new ingredient</h1>
+            <form class="new-ingredient-form" method="post" action="#" th:action="@{/saveIngredient}" th:object="${newIngredient}">
+                <input type="text" th:field="*{name}" placeholder="Name of the ingredient" />
+                <div class=""><input type="submit" value="Submit" /></div>
+            </form>
+
+            <ul class="ingredient-list" th:each='ingredient : ${ingredients}'>
+                <li>
+                    <a th:href="@{/ingredient/{id}(id=${ingredient.id})}" th:text='${ingredient.name}'>Ham</a>
+                </li>
+            </ul>
+
+            <div class="back-btn"><button><a th:href='@{/}'>Back to main page</a></button></div>
+        </div>
+    </div>
+</body>
+</html>
