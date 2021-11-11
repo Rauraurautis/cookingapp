@@ -1,0 +1,121 @@
+* {
+    font-family: Helvetica;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+a, a:visited {
+    color: white;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    background-color: #907163
+}
+
+textarea {
+    width: 500px;
+    height: 200px;
+}
+
+.main_container {
+    background-color: #8E3522;
+    padding-bottom: 3rem;
+    margin: auto;
+    width: 50%;
+    min-height: 100%;
+    -webkit-box-shadow: -2px -3px 15px 5px rgba(0, 0, 0, 0.36);
+    box-shadow: -2px -3px 15px 5px rgba(0, 0, 0, 0.36);
+    -webkit-border-radius: 19px;
+    border-radius: 19px;
+}
+
+.recipe-description {
+    width: 500px;
+    height: auto;
+}
+
+.main_container h3,
+h1 {
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+.sub_container {
+    padding-top: 30px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.sub_container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.ingredient_table {
+    min-width: 100%;
+    border-collapse: collapse;
+}
+
+.ingredientadd {
+    margin-top: 20%;
+    text-align: center;
+}
+
+.ingredientadd input[type=submit] {
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: none;
+    background-color: #1E6EAF;
+    color: white;
+}
+
+.ingredientadd input[type=text] {
+    padding: 9px 9px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: none;
+    background-color: whitesmoke;
+}
+
+.ingredientadd input[type=text]:focus,
+select {
+    outline-width: 0;
+}
+
+.ingredientadd select {
+    padding: 8px 8px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: none;
+    background-color: whitesmoke;
+}
+
+.back-btn {
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.back-btn button {
+    background-color: #1E6EAF;
+    height: 40px;
+    width: 50%;
+    max-width: 100px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    color: white;
+}
+
+.back-btn button:hover,
+.ingredientadd input[type=submit]:hover {
+    background-color: #154C78;
+    color: #CFCFCF;
+    cursor: pointer;
+}

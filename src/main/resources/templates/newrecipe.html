@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/addcss.css}" rel="stylesheet">
+    </head>
+    <body>
+    <div class="main-container">
+        <div class="sub-container">
+            <h1>Add a new recipe</h1>
+            <form class="new-recipe-form" th:object="${newRecipe}" th:action="@{/newrecipe}" method="post" enctype="multipart/form-data">
+                <input type="text" th:field="*{name}" placeholder="Name of recipe" />
+                <textarea th:field="*{description}" placeholder="Description"></textarea>
+                <input type="file" name="file" />
+                <div class="submit-btn"><input type="submit" value="Submit" /></div>
+            </form>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/recipecss.css}" rel="stylesheet">
+        <html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    </head>
+    <body>
+    <div class="main_container">
+        <div class="sub_container" th:object="${recipe}">
+            <h1 th:text="${recipe.name}">Recipe name</h1>
+            <img th:src="@{'/recipes/image/' + ${recipe.id} ?: '/recipes/image/5'}" placeholder='No image yet' src="https://food-images.files.bbci.co.uk/food/recipes/peaandmintsoup_81285_16x9.jpg">
+            <div class="recipe-description">
+                <h4 th:text="${recipe.description}">
+                </h4>
+                <form sec:authorize="hasRole('ADMIN')" method="post" th:action="@{/recipes/description/{id}(id=${recipe.id})}" action="#" th:object="${recipe}" >
+                    <textarea name="description" th:text="${recipe.description}"></textarea>
+                    <input type="submit"/>
+                </form>
+            </div>
+            <h3>Ingredients</h3>
+            <table class="ingredient_table">
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                </tr>
+                <tr th:each="entry : ${ingredients}">
+                    <td th:text="${entry.key.name}">Salt</td>
+                    <td th:text="${entry.value}">1 tbsp</td>
+                </tr>
+            </table>
+            <div sec:authorize="hasRole('ADMIN')" class="ingredientadd">
+                <h3>Add ingredient</h3>
+                <form method="post" th:action="@{/recipes/{id}(id=${recipe.id})}" action="#" th:object="${newIngredient}">
+                    <select name="ingredient">
+            <option th:each="ingredient : ${ingredientlist}" th:value="${ingredient.id}" th:text="${ingredient.name}" name="ingredient"/>
+                        
+        </select>
+                    <input type="text" placeholder="amount" name="amount" />
+                    <input type="submit" value="Add ingredient" th:name="recipe" />
+                </form>
+            </div>
+            <div class="back-btn"><button><a th:href='@{/}'>Back to main page</a></button></div>
+            <div sec:authorize="hasRole('ADMIN')" class="back-btn"><button><a th:href='@{/deleterecipe/{id}(id=${recipe.id})}'>Delete this recipe</a></button></div>
+        </div>
+    </div>
+</body>
+</html>

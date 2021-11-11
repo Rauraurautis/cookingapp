@@ -1,0 +1,117 @@
+* {
+    font-family: Helvetica;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a, a:visited {
+    color: white;
+}
+
+body {
+    background-color: #907163
+}
+
+.main-container {
+    background-color: #8E3522;
+    padding-bottom: 3rem;
+    margin: auto;
+    width: 50%;
+    min-height: 100%;
+    -webkit-box-shadow: -2px -3px 15px 5px rgba(0, 0, 0, 0.36);
+    box-shadow: -2px -3px 15px 5px rgba(0, 0, 0, 0.36);
+    -webkit-border-radius: 19px;
+    border-radius: 19px;
+}
+
+.sub-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 30px;
+    min-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.new-recipe-form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 400px;
+    justify-content: space-around;
+}
+
+.new-ingredient-form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 200px;
+    justify-content: space-around;
+}
+
+.new-recipe-form textarea {
+    height: 5rem;
+}
+
+.new-recipe-form input[type="submit"],
+.new-ingredient-form input[type="submit"] {
+    background-color: #1E6EAF;
+    height: 40px;
+    width: 50%;
+    max-width: 100px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    color: white;
+}
+
+.new-recipe-form input[type="submit"]:hover,
+.new-ingredient-form input[type="submit"]:hover {
+    background-color: #154C78;
+    color: #CFCFCF;
+    cursor: pointer;
+}
+
+.new-recipe-form textarea:focus,
+input[type="text"]:focus {
+    outline-width: 0;
+}
+
+.back-btn {
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.back-btn button {
+    background-color: #1E6EAF;
+    height: 40px;
+    width: 50%;
+    max-width: 100px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    color: white;
+}
+
+.ingredient-list {
+    max-height: 500px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.back-btn button:hover,
+.ingredientadd input[type=submit]:hover {
+    background-color: #154C78;
+    color: #CFCFCF;
+    cursor: pointer;
+}

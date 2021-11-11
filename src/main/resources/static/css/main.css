@@ -1,0 +1,105 @@
+* {
+    font-family: Helvetica;
+    text-decoration: none;
+}
+
+a {
+    color: black;
+}
+
+body {
+    background-color: #907163
+}
+
+.main_container {
+    background-color: #8E3522;
+    margin: auto;
+    width: 50%;
+    height: 100%;
+    -webkit-box-shadow: -2px -3px 15px 5px rgba(0, 0, 0, 0.36);
+    box-shadow: -2px -3px 15px 5px rgba(0, 0, 0, 0.36);
+    -webkit-border-radius: 19px;
+    border-radius: 19px;
+}
+
+.recipesheader {
+    user-select: none;
+}
+
+.buttons {
+    padding-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons button {
+    color: rgb(255, 255, 255);
+    font-size: 19px;
+    line-height: 19px;
+    padding: 14px;
+    border-radius: 24px;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    background-image: linear-gradient(to right, rgb(190, 10, 10) 0%, rgb(35, 136, 203) 93%, rgb(20, 78, 117) 100%);
+    box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
+    border: 2px solid rgb(28, 110, 164);
+    display: inline-block;
+}
+
+.myButton:hover {
+    background: #BE0A0A;
+    cursor: pointer;
+}
+
+.myButton:active {
+    background: #144E75;
+}
+
+.recipesheader {
+    text-align: center;
+    padding-top: 5rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-shadow: -1px 1px 2px #000000;
+    font-weight: bolder;
+}
+
+.recipes {
+    text-transform: uppercase;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recipes li {
+    font-size: 1.5rem;
+    list-style-type: none;
+    padding: 0.2rem;
+}
+
+.logout-button {
+    margin-top: 15%;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.logout-button button {
+    background-color: #1E6EAF;
+    height: 40px;
+    width: 50%;
+    max-width: 100px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    color: white;
+}
+
+.logout-button button:hover {
+    background-color: #154C78;
+    color: #CFCFCF;
+    cursor: pointer;
+}

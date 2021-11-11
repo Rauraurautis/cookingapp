@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/logincss.css}" rel="stylesheet">
+    </head>
+    <body>
+    <div class="main_container">
+        <div class="login_container">
+            <h1>Login</h1>
+            <form class="login_form" th:action='@{/login}' method='post'>
+                <div class="login_input"><input type="text" name="username" placeholder="Username" /></div>
+                <div class="login_input"><input type="password" name="password" placeholder="Password" /></div>
+                <div class="submit_btn"><input type="submit" value="Login" /></div>
+            </form>
+            <div class="signup_link">
+                Not a member? <a th:href="@{/signup}">Sign up</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
